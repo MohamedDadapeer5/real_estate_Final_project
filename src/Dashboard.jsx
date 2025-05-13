@@ -224,11 +224,11 @@ const Dashboard = () => {
                                 <div className="location-input-container">
                                     <input
                                         type="text"
-                                        id="location"
-                                        value={location}
+                                    id="location"
+                                    value={location}
                                         onChange={handleLocationChange}
                                         placeholder="Type location..."
-                                        required
+                                    required
                                     />
                                     {suggestedLocations.length > 0 && (
                                         <div className="location-suggestions">
@@ -241,7 +241,7 @@ const Dashboard = () => {
                                                     <FaMapMarkerAlt />
                                                     {loc}
                                                 </div>
-                                            ))}
+                                    ))}
                                         </div>
                                     )}
                                 </div>
@@ -261,17 +261,17 @@ const Dashboard = () => {
                             <div className="prediction-result">
                                 <h3>Property Found!</h3>
                                 <div className="property-image-container">
-                                    <img
+                                <img
                                         src={propertyFound.images && propertyFound.images[0] 
                                             ? propertyFound.images[0] 
                                             : 'https://via.placeholder.com/300x200?text=Property+Image'}
-                                        alt={propertyFound.title}
-                                        className="property-image"
+                                    alt={propertyFound.title}
+                                    className="property-image"
                                         onError={(e) => {
                                             e.target.onerror = null;
                                             e.target.src = 'https://via.placeholder.com/300x200?text=Property+Image';
                                         }}
-                                    />
+                                />
                                 </div>
                                 <p className="price">
                                     <FaRupeeSign /> {predictedPrice.toLocaleString('en-IN')}
@@ -291,7 +291,7 @@ const Dashboard = () => {
                                     >
                                         Contact
                                     </button>
-                                </div>
+                                    </div>
                             </div>
                         ) : location && !isLoading && (
                             <div className="prediction-result no-property">
